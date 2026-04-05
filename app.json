@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "محاسبة العادات اليومية",
+    "slug": "my-habits-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F7F4EE"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.esmailbdjd.myhabits",
+      "infoPlist": {
+        "NSUserNotificationsUsageDescription": "نستخدم التنبيهات لتذكيرك بعاداتك اليومية في أوقاتها المحددة.",
+        "UIBackgroundModes": [
+          "fetch",
+          "remote-notification"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F7F4EE"
+      },
+      "package": "com.esmailbdjd.myhabits",
+      "permissions": [
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#148F77",
+          "sounds": []
+        }
+      ],
+      "expo-asset",
+      "@react-native-community/datetimepicker"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "scheme": "myhabitsapp",
+    "extra": {
+      "eas": {
+        "projectId": "9b387baf-c7b9-4d64-bdec-6472704ccfa3" 
+      }
+    }
+  }
+}
